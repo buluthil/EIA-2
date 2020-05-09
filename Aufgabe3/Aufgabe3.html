@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="Aufgabe3.css">
+    <script src="Aufgabe3.js"></script>
+    <title>Haushaltshilfe </title>
+    
+</head>
+<header>Haushaltshilfe</header>
+<p>Willkommen auf der Website Haushaltshilfe. Kaufe von zuhause aus in aller ruhe ein. </p>
+<p>Viel Spaß!</p>
+<body>
+    <div id="form">
+    <fieldset>
+        <legend>Article</legend>
+        <select name="Article" id="Article">
+            <option value="Brot"value="Brot" unit="laib" price="1.50">Brot</option>
+            <option value="Wasser"value="Wasser" unit="6er-packung" price="4.99">Wasser</option>
+            <option value="Bananen"value="Bananen" unit="1kg" price="1.50">Bananen</option>
+            <option name="Pfirsich" value="Pfirsich" unit="1Kg" price="1.99">Pfirsich</option>
+            <option name="Erdbeere" value="Erdbeere" unit="1Kg" price="1.99">Erdbeere</option>
+            <option name="Äpfel" value="Äpfel" unit="1kg" price="1.50">Äpfel</option>
+            <option name="Mehl" value="Mehl" unit="1kg" price="0.80">Mehl</option>
+            <option name="Eier" value="Eier" unit="10er-Packung" price="1.99">Eier</option>
+            <option name="Milch" value="Milch" unit="1-Karton" price="10.99">Milch</option>
+        </select>
+    
+        <span id="slider">
+            <span>
+                Menge:
+                1
+                <input  type="range" min="1.0" max="10" name="Menge" id="Quantity" step="1.0" value="1.0">
+                10
+            </span>
+            <br>
+            <br>
+
+            <input type="radio" name="Einkaufsläden" id="Edeka"/>
+            <label for="Edeka">Edeka</label>
+            <input type="radio" name="Einkaufsläden" id="Aldi"/>
+            <label for="Aldi">Aldi</label>
+            <input type="radio" name="Einkaufsläden"id="Rewe"/>
+            <label for="Rewe">Rewe</label>
+            <input type="radio" name="Einkaufsläden" id="Lidl"/>
+            <label for="Lidl">Lidl</label>
+
+            <input type="submit" name="submit"/>
+
+        
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Haushaltshilfen</legend>
+        <br>
+          <input type="checkbox" name="Service" id="Rasen mähen">
+          <label for="Rasen mähen">Rasen mähen</label>
+          <input type="checkbox" name="Service" id="Staubsaugen">
+          <label for="Staubsaugen">Staubsaugen</label>
+          <input type="checkbox" name="Service" id="Staub wischen">
+          <label for="Staub wischen">Staub wischen</label>
+          <input type="checkbox" name="Service" id="Post wegbringen">
+          <label for="Post wegbringen">Post wegbringen</label>
+          <input type="submit" name="submit"/>
+    </fieldset>
+    <br>
+    <!-- Geld einzahlen/Abheben -->
+    <fieldset>
+       <legend>Geld Abheben & Einzahlen</legend>
+        <input type="radio" name="Abheben" id="Abheben"/>
+            <label for="Abheben">Abheben</label>
+            <input type="radio" name="Einzahlen" id="Einzahlen"/>
+            <label for="Einzahlen">Einzahlen</label>
+          <input type="submit" name="submit"/>
+            <span id="slider">
+                <span>
+                    10
+                    <input price="0" type="range" name="bargeld" min="10" max="200" id="Bank" step="5" value="10">
+                    200
+                </span>
+            </span>
+    </fieldset>
+
+    <fieldset>
+        <legend>Bestellübersicht</legend>
+    </fieldset>
+    
+
+    
+    
+   
+   <div
+    class="login">
+    <h1>LOGIN</h1>
+    <input type="text" name="" placeholder="Username">
+    <input type="password" name="" placeholder="Password">
+    <input type="submit" name="" value="Login">
+    </div> 
+
+
+</body>
+</html>
