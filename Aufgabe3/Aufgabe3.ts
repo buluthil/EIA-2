@@ -1,4 +1,4 @@
-namespace L03_CocktailBar{
+namespace L03_Hauhaltshilfe{
     window.addEventListener("load", handleLoad);
 
     function handleLoad(_event: Event):void{

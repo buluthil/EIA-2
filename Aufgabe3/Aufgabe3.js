@@ -1,6 +1,6 @@
 "use strict";
-var L03_CocktailBar;
-(function (L03_CocktailBar) {
+var L03_Hauhaltshilfe;
+(function (L03_Hauhaltshilfe) {
     window.addEventListener("load", handleLoad);
     function handleLoad(_event) {
         console.log("start");
@@ -17,5 +17,5 @@ var L03_CocktailBar;
             progress.value = parseFloat(amount);
         }
     }
-})(L03_CocktailBar || (L03_CocktailBar = {}));
+})(L03_Hauhaltshilfe || (L03_Hauhaltshilfe = {}));
 //# sourceMappingURL=Aufgabe3.js.map
