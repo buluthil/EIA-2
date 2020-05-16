@@ -33,14 +33,12 @@ namespace L04_Haushaltshilfe {
             let selector: string = "[value='" + entry[1] + "']";
             let item: HTMLInputElement = <HTMLInputElement>document.querySelector(selector);
             let itemPrice: number = Number(item.getAttribute("price"));
+            
             switch (entry[0]) {
-                case "Amount":
-                    break;
                 case "Article":
-                    let amount: number = Number(formData.get("Amount"));
-                    itemPrice = amount * itemPrice;
-                    order.innerHTML += amount + " L " + item.value + ": €" + itemPrice + "<br>";
                     break;
+                    order.innerHTML += entry [0] + "<br>" + itemPrice + "<br>";
+                   
                 default:
                     order.innerHTML += item.value + ": €" + itemPrice.toFixed(2) + "<br>";
             }

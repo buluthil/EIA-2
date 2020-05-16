@@ -28,8 +28,19 @@ namespace L04_Haushaltshilfe {
     }
 
     function createSelect(_items: Item[], _category: string): HTMLElement | null  {   
-        
-    return null;
+        let group: HTMLDivElement = document.createElement("div");
+        group.classList.add(_category);
+        let selection: HTMLSelectElement = document.createElement("select");
+        selection.name = _category;
+        for (let item of _items) {
+            let option: HTMLOptionElement = document.createElement("option");
+            option.setAttribute("price", item.price.toFixed(2));
+            option.setAttribute("name", item.name);
+            option.value = option.textContent = item.name;
+            selection.appendChild(option);
+            group.appendChild(selection);
+        }
+    return group;
 }
 
     function createSingle(_items: Item[]): HTMLElement | null {

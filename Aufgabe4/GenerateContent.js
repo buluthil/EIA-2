@@ -3,7 +3,6 @@ var L04_Haushaltshilfe;
 (function (L04_Haushaltshilfe) {
     function generateContent(_data) {
         for (let category in _data) {
-            // console.log(category);
             let items = _data[category];
             let group = null;
             switch (category) {
@@ -26,7 +25,19 @@ var L04_Haushaltshilfe;
     }
     L04_Haushaltshilfe.generateContent = generateContent;
     function createSelect(_items, _category) {
-        return null;
+        let group = document.createElement("div");
+        group.classList.add(_category);
+        let selection = document.createElement("select");
+        selection.name = _category;
+        for (let item of _items) {
+            let option = document.createElement("option");
+            option.setAttribute("price", item.price.toFixed(2));
+            option.setAttribute("name", item.name);
+            option.value = option.textContent = item.name;
+            selection.appendChild(option);
+            group.appendChild(selection);
+        }
+        return group;
     }
     function createSingle(_items) {
         return null;
