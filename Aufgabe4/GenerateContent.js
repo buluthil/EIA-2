@@ -9,8 +9,8 @@ var L04_Haushaltshilfe;
                 case "Article":
                     group = createSelect(items, category);
                     break;
-                case "Geld abheben / einzahlen":
-                    group = createSingle(items);
+                case "Geld":
+                    group = createSingle(items, category);
                     break;
                 case "Haushaltshilfe":
                     group = createMultiple(items, category);
@@ -39,8 +39,22 @@ var L04_Haushaltshilfe;
         }
         return group;
     }
-    function createSingle(_items) {
-        return null;
+    function createSingle(_items, _category) {
+        let group = document.createElement("span");
+        for (let item of _items) {
+            let radio = document.createElement("input");
+            radio.type = "radio";
+            radio.setAttribute("price", item.price.toFixed(2));
+            radio.value = item.name;
+            radio.name = _category;
+            radio.id = item.name;
+            let label = document.createElement("label");
+            label.textContent = item.name;
+            label.htmlFor = item.name;
+            group.appendChild(radio);
+            group.appendChild(label);
+        }
+        return group;
     }
     function createMultiple(_items, _category) {
         let group = document.createElement("div");

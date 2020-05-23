@@ -10,8 +10,8 @@ namespace L04_Haushaltshilfe {
                 case "Article":
                     group = createSelect(items, category);
                     break;
-                case "Geld abheben / einzahlen":
-                    group = createSingle(items);
+                case "Geld":
+                    group = createSingle(items, category);
                     break;
                 case "Haushaltshilfe":
                     group = createMultiple(items, category);
@@ -43,8 +43,24 @@ namespace L04_Haushaltshilfe {
     return group;
 }
 
-    function createSingle(_items: Item[]): HTMLElement | null {
-        return null;
+    function createSingle(_items: Item[], _category: string): HTMLElement | null {   
+        let group: HTMLSpanElement = document.createElement("span");
+        for (let item of _items) {
+            let radio: HTMLInputElement = document.createElement("input");
+            radio.type = "radio";
+            radio.setAttribute("price", item.price.toFixed(2));
+            radio.value = item.name;
+            radio.name = _category;
+            radio.id = item.name;
+
+            let label: HTMLLabelElement = document.createElement("label");
+            label.textContent = item.name;
+            label.htmlFor = item.name;
+
+            group.appendChild(radio);
+            group.appendChild(label);
+        }
+        return group;
     }
     function createMultiple(_items: Item[], _category: string): HTMLElement | null {
         let group: HTMLDivElement = document.createElement("div");
