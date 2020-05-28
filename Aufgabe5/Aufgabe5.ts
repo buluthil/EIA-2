@@ -25,7 +25,7 @@ namespace L05_Haushaltshilfe {
         console.log("Send order");
         let formData: FormData = new FormData(form);
         let query: URLSearchParams = new URLSearchParams(<any>formData);
-        await fetch("index.html?" + query.toString());
+        await fetch("Aufgabe5.html?" + query.toString());
         alert("Order sent!");
     }
 
