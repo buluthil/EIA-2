@@ -23,7 +23,7 @@ var L06_Haushaltshilfe;
         let query = new URLSearchParams(formData);
         let response = await fetch(url + "?" + query.toString());
         let responseText = await response.text();
-        alert(responseText);
+        alert("Ihre Bestellung wurde entgegengenommen" + responseText);
     }
     function handleChange(_event) {
         displayOrder();
