@@ -29,9 +29,8 @@ namespace L06_Haushaltshilfe {
         let response: Response = await fetch(url + "?" + query.toString());
         let responseText: string = await response.text();
         alert("Ihre Bestellung wurde entgegengenommen" + responseText);
-
-   
     }
+
 
     function handleChange(_event: Event): void {
         displayOrder();
