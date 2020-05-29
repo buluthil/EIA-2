@@ -3,6 +3,7 @@ var L06_Haushaltshilfe;
 (function (L06_Haushaltshilfe) {
     window.addEventListener("load", handleLoad);
     let form;
+    let url = "http://localhost:5001";
     async function handleLoad(_event) {
         console.log("Init");
         let response = await fetch("Data.json");
@@ -20,8 +21,9 @@ var L06_Haushaltshilfe;
         console.log("Send order");
         let formData = new FormData(form);
         let query = new URLSearchParams(formData);
-        await fetch("Aufgabe5.html?" + query.toString());
-        alert("Order sent!");
+        let response = await fetch(url + "?" + query.toString());
+        let responseText = await response.text();
+        alert(responseText);
     }
     function handleChange(_event) {
         displayOrder();
