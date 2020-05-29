@@ -22,13 +22,15 @@ namespace L06_Haushaltshilfe {
 
         displayOrder();
     }
-
     async function sendOrder(_event: Event): Promise<void> {
         console.log("Send order");
         let formData: FormData = new FormData(form);
         let query: URLSearchParams = new URLSearchParams(<any>formData);
-        await fetch("Aufgabe5.html?" + query.toString());
-        alert("Order sent!");
+        let response: Response = await fetch(url + "?" + query.toString());
+        let responseText: string = await response.text();
+        alert(responseText);
+
+   
     }
 
     function handleChange(_event: Event): void {
