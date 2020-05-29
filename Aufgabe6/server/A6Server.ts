@@ -26,7 +26,7 @@ export namespace L06_Haushaltshilfe {
             }
 
             let jsonString: string = JSON.stringify(url.query);
-            _response.write(jsonString);
+            _response.write("\n" + "Alert jsonString aus A6Server.ts: " + jsonString);
         }
 
         _response.end();

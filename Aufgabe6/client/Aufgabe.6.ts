@@ -1,7 +1,8 @@
 namespace L06_Haushaltshilfe {
     window.addEventListener("load", handleLoad);
     let form: HTMLFormElement;
-    let url: string ="https://buluthil.herokuapp.com/";
+    let url: string ="http://localhost:5001";
+
 
     async function handleLoad(_event: Event): Promise<void> {
         console.log("Init");
