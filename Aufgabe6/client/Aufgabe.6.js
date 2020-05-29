@@ -1,6 +1,6 @@
 "use strict";
-var L05_Haushaltshilfe;
-(function (L05_Haushaltshilfe) {
+var L06_Haushaltshilfe;
+(function (L06_Haushaltshilfe) {
     window.addEventListener("load", handleLoad);
     let form;
     async function handleLoad(_event) {
@@ -8,7 +8,7 @@ var L05_Haushaltshilfe;
         let response = await fetch("Data.json");
         let offer = await response.text();
         let data = JSON.parse(offer);
-        L05_Haushaltshilfe.generateContent(data);
+        L06_Haushaltshilfe.generateContent(data);
         form = document.querySelector("form");
         let submit = document.querySelector("button[type=button]");
         console.log(submit);
@@ -46,5 +46,5 @@ var L05_Haushaltshilfe;
         }
         order.innerHTML += "<p><strong>Total: : €" + price.toFixed(2);
     }
-})(L05_Haushaltshilfe || (L05_Haushaltshilfe = {}));
-//# sourceMappingURL=Aufgabe5.js.map
+})(L06_Haushaltshilfe || (L06_Haushaltshilfe = {}));
+//# sourceMappingURL=Aufgabe.6.js.map

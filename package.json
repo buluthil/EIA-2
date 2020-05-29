@@ -1,0 +1,22 @@
+{
+  "name": "eia-2",
+  "version": "1.0.0",
+  "description": "first_heroku app",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+
+  "scripts": {
+    "start": "node ./Aufgabe6/server/A6Server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buluthil/EIA-2.git"
+  },
+  "author": "Bulut Hilal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buluthil/EIA-2/issues"
+  },
+  "homepage": "https://github.com/buluthil/EIA-2#readme"
+}
