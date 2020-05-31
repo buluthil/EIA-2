@@ -3,7 +3,7 @@ var L06_Haushaltshilfe;
 (function (L06_Haushaltshilfe) {
     window.addEventListener("load", handleLoad);
     let form;
-    let url = "http://localhost:5001";
+    let url = "https://buluthil.herokuapp.com/";
     async function handleLoad(_event) {
         console.log("Init");
         let response = await fetch("Data.json");
