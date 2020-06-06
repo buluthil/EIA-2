@@ -2,15 +2,30 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const Http = require("http");
 const Url = require("url");
-var L06_Haushaltshilfe;
-(function (L06_Haushaltshilfe) {
-    let server = Http.createServer();
+const Mongo = require("mongodb");
+var L07_Haushaltshilfe;
+(function (L07_Haushaltshilfe) {
+    let orders;
     let port = process.env.PORT;
     if (port == undefined)
         port = 5001;
-    console.log("Server starting on port:" + port);
-    server.listen(port);
-    server.addListener("request", handleRequest);
+    let databaseUrl = "mongodb+srv://Hilal:<password>@eia-2-xoi33.mongodb.net/<dbname>?retryWrites=true&w=majority";
+    /* mongodb+srv://Hilal:<password>@eia-2-xoi33.mongodb.net/<dbname>?retryWrites=true&w=majority*/
+    startServer(port);
+    connectToDatabase(databaseUrl);
+    function startServer(_port) {
+        let server = Http.createServer();
+        console.log("Server starting on port:" + _port);
+        server.listen(_port);
+        server.addListener("request", handleRequest);
+    }
+    async function connectToDatabase(_url) {
+        let options = { useNewUrlParser: true, useUnifiedTopology: true };
+        let mongoClient = new Mongo.MongoClient(_url, options);
+        await mongoClient.connect();
+        orders = mongoClient.db("CocktailBar").collection("Orders");
+        console.log("Database connection ", orders != undefined);
+    }
     function handleRequest(_request, _response) {
         console.log("What's up?");
         _response.setHeader("content-type", "text/html; charset=utf-8");
@@ -21,9 +36,13 @@ var L06_Haushaltshilfe;
                 _response.write(key + ":" + url.query[key] + "<br/>");
             }
             let jsonString = JSON.stringify(url.query);
-            _response.write("\n" + "Alert jsonString aus A6Server.ts: " + jsonString);
+            _response.write("\n" + "Alert jsonString aus A7Server.ts: " + jsonString);
+            storeOrder(url.query);
         }
         _response.end();
     }
-})(L06_Haushaltshilfe = exports.L06_Haushaltshilfe || (exports.L06_Haushaltshilfe = {}));
+    function storeOrder(_order) {
+        orders.insert(_order);
+    }
+})(L07_Haushaltshilfe = exports.L07_Haushaltshilfe || (exports.L07_Haushaltshilfe = {}));
 //# sourceMappingURL=A7Server.js.map
