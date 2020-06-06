@@ -13,8 +13,12 @@ export namespace L07_Haushaltshilfe {
     if (port == undefined)
         port = 5001;
 
-    let databaseUrl: string = "mongodb+srv://Hilal:<password>@eia-2-xoi33.mongodb.net/<dbname>?retryWrites=true&w=majority";
+  
+      let databaseUrl: string = "mongodb+srv://Hilal:<password>@eia-2-xoi33.mongodb.net/<dbname>?retryWrites=true&w=majority";
+
+
    /* mongodb+srv://Hilal:<password>@eia-2-xoi33.mongodb.net/<dbname>?retryWrites=true&w=majority*/
+   /* */ 
 
     startServer(port);
     connectToDatabase(databaseUrl);

@@ -11,6 +11,7 @@ var L07_Haushaltshilfe;
         port = 5001;
     let databaseUrl = "mongodb+srv://Hilal:<password>@eia-2-xoi33.mongodb.net/<dbname>?retryWrites=true&w=majority";
     /* mongodb+srv://Hilal:<password>@eia-2-xoi33.mongodb.net/<dbname>?retryWrites=true&w=majority*/
+    /* */
     startServer(port);
     connectToDatabase(databaseUrl);
     function startServer(_port) {
