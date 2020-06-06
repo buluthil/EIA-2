@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "first_heroku app",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "mongodb": "^3.5.8"
+  },
   "devDependencies": {},
-
   "scripts": {
-    "start": "node Aufgabe6/server/A6Server.js"
+    "start": "node Aufgabe7/server/A7Server.js"
   },
   "repository": {
     "type": "git",
