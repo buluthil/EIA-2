@@ -2,7 +2,7 @@
 var LO2_Sequenzmemory;
 (function (LO2_Sequenzmemory) {
     console.log("start");
-    let chosenWord;
+    /*let chosenWord: string;*/
     window.addEventListener("load", handleLoad);
     function handleLoad(_event) {
         let div = document.querySelector("div.card");

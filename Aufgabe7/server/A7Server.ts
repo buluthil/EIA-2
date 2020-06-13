@@ -1,4 +1,4 @@
-import * as Http from "http";
+/*import * as Http from "http";
 import * as Url from "url";
 import * as Mongo from "mongodb";
 
@@ -17,8 +17,8 @@ export namespace L07_Haushaltshilfe {
       let databaseUrl: string = "mongodb+srv://Hilal:<password>@eia-2-xoi33.mongodb.net/<dbname>?retryWrites=true&w=majority";
 
 
-   /* mongodb+srv://Hilal:<password>@eia-2-xoi33.mongodb.net/<dbname>?retryWrites=true&w=majority*/
-   /* */ 
+   /* mongodb+srv://Hilal:<password>@eia-2-xoi33.mongodb.net/<dbname>?retryWrites=true&w=majority
+
 
     startServer(port);
     connectToDatabase(databaseUrl);
@@ -64,4 +64,4 @@ export namespace L07_Haushaltshilfe {
     function storeOrder(_order: Order): void {
         orders.insert(_order);
     }
-}
+}*/

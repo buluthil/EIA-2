@@ -1,17 +1,17 @@
-import * as Http from "http";
-import * as Url from "url";
+/*import * as Http from "http";
+/*import * as Url from "url";
 
 export namespace L06_Haushaltshilfe {
     let server: Http.Server = Http.createServer();
 
-    let port: number | string | undefined = process.env.PORT;
-    if (port == undefined)
+    /*let port: number | string | undefined = process.env.PORT;*/
+   /* if (port == undefined)
         port = 5001;
 
     console.log("Server starting on port:" + port);
 
-    server.listen(port);
-    server.addListener("request", handleRequest);
+   server.listen(port);*/
+    /*server.addListener("request", handleRequest);
 
     function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
         console.log("What's up?");
@@ -31,4 +31,4 @@ export namespace L06_Haushaltshilfe {
 
         _response.end();
     }
-}
+}*/
