@@ -26,7 +26,7 @@ namespace L09_Canvas {
         
         drawBloodParticles( new Vector( 260, 490), 50);
         
-        drawHumanCells(new Vector (200, 300), new Vector(100, 120), 10, false);
+        drawHumancells(new Vector (200, 300), new Vector(100, 120), 10, false);
        
         drawVirus(new Vector(120, 300), false, 5);
      
@@ -74,7 +74,7 @@ namespace L09_Canvas {
     }
 
    /*Menschlichezellen mit Partikeln*/
-    function drawHumanCells(_position: Vector, _size: Vector, _number: number, _redraw: boolean): void {
+    function drawHumancells(_position: Vector, _size: Vector, _number: number, _redraw: boolean): void {
         console.log("menschlicheZelle", _position);
         let r1: number = 0.5;/*inneres */
         let r2: number = 17;/*größe Partikel */
@@ -184,7 +184,7 @@ namespace L09_Canvas {
     }
     function refresh(): void {
         drawBackground();
-        drawHumanCells(new Vector(200, 300), new Vector(100, 120), humanCell.length, true);
+        drawHumancells(new Vector(200, 300), new Vector(100, 120), humanCell.length, true);
         drawVirus(new Vector(120, 300), true, 5);
     }
        
