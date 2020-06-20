@@ -9,4 +9,4 @@ var L09_Canvas;
     }
     L09_Canvas.Humancell = Humancell;
 })(L09_Canvas || (L09_Canvas = {}));
-//# sourceMappingURL=HumanCell.js.map
+//# sourceMappingURL=Humancell.js.map
