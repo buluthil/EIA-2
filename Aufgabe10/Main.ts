@@ -44,7 +44,7 @@ namespace L10_Canvas {
     }
     /*Hintergrund mit pattern zeichnen*/ 
     function drawBackground(): void {
-        
+
         let gradient: CanvasGradient = crc2.createLinearGradient(0, 0, 0, crc2.canvas.height);
         gradient.addColorStop(0, "HSL(0, 100%, 70%)"); /*rot wird dünkler*/
         gradient.addColorStop(middle, "white");
@@ -170,7 +170,7 @@ namespace L10_Canvas {
     function frame(): void {
         refresh();
         for (let i: number = 0; i < cells.length; i++) {
-            cells[i].move(2 / 50);
+            cells[i].move(1.5 / 50);
             cells[i].draw();
         }
     
