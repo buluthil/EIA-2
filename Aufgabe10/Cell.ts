@@ -7,9 +7,8 @@ namespace L10_Canvas {
             this.position = _position;
             this.velocity = new Vector(0, 0);
         }
-
+        
         draw(): void {
-          //error default
         }
 
         move(_timeslice: number): void {

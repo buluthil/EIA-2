@@ -4,12 +4,8 @@ namespace L10_Canvas {
     let middle: number = 0.95;
     export let canvas: HTMLCanvasElement;
     
-
-    
-
     let humanCell: Humancell[] = [];
    
-    
     let viren: Humancell[] = [];
     let cells: Cell[] = [];
     
@@ -42,7 +38,7 @@ namespace L10_Canvas {
 
 
     }
-    /*Hintergrund mit pattern zeichnen*/ 
+   /*Hintergrund mit pattern zeichnen*/ 
     function drawBackground(): void {
 
         let gradient: CanvasGradient = crc2.createLinearGradient(0, 0, 0, crc2.canvas.height);
@@ -79,8 +75,8 @@ namespace L10_Canvas {
     }
 
   
-      /*Menschlichezellen mit Partikeln*/
-    function drawHumanCells(_position: Vector, _size: Vector, _number: number, _redraw: boolean): void {
+     /*Menschlichezellen mit Partikeln*/
+     function drawHumanCells(_position: Vector, _size: Vector, _number: number, _redraw: boolean): void {
         let r1: number = 0.5;/*inneres */
         let r2: number = 17;/*größe Partikel */
         let particle: Path2D = new Path2D();
