@@ -170,7 +170,7 @@ namespace L10_Canvas {
     function frame(): void {
         refresh();
         for (let i: number = 0; i < cells.length; i++) {
-            cells[i].move(1.5 / 50);
+            cells[i].move(1.6 / 50);
             cells[i].draw();
         }
     
