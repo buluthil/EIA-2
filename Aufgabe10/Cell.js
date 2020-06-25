@@ -7,7 +7,6 @@ var L10_Canvas;
             this.velocity = new L10_Canvas.Vector(0, 0);
         }
         draw() {
-            //error default
         }
         move(_timeslice) {
             let offset = new L10_Canvas.Vector(this.velocity.x, this.velocity.y);
